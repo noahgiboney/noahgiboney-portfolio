@@ -14,7 +14,10 @@ export default function NavBar() {
 
   return (
     <header className={style.navigation}>
-      <h1>NG</h1>
+      <div className={style.logo}>
+        <h1>NG</h1>
+        <div className={style.line}></div>
+      </div>  
       <nav ref={navRef}> 
           <Link href={'/'} onClick={showNavBar}>Home</Link>
           <Link href={'/#about'} onClick={showNavBar}>About</Link>

@@ -60,7 +60,6 @@ export default function Home({blogs, projects}: HomeProps) {
 
   return (
     <div>
-
       <div className={style.vantaContainer}>
       <VantaFog/>
         <section className={style.homeContainer}>

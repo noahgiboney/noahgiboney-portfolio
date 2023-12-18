@@ -1,5 +1,4 @@
 import  { Josefin_Sans }  from 'next/font/google'
-import 'src/styles/global.css'
 import NavBar from '@/components/NavComponent';
 import Footer from '@/components/FooterComponent';
 

@@ -190,7 +190,7 @@
   margin: 10px;
   padding: 10px 20px;
   border: 1px solid #020203;
-  transition: all 0.3s; /* Specify a duration for the transition */
+  transition: all 0.3s; 
   border-radius: 5px;
   font-weight: bold;
 }

@@ -10,7 +10,7 @@ import {IBlog} from '@/database/blogSchema'
 import Project, {IProject} from '@/database/projectSchema'
 import BlogPreviewComponent from '@/components/Blog/BlogPreviewComponent';
 import ProjectComponent from '@/components/ProjectPreviewComponent';
-import {Contact} from '@/components/ContactForm'
+import ContactForm from '@/components/ContactForm'
 
 interface HomeProps {
   blogs: IBlog[];
@@ -93,6 +93,11 @@ export default function Home({blogs, projects}: HomeProps) {
               <p>I'm a computer science major at Cal Poly, San Luis Obispo.</p>
               <p>Currently interested in iOS Development and Software Engineering</p>
               <p>Connect with me on <a href="https://www.linkedin.com/in/noah-giboney-896847261/" className="link">LinkedIn</a> and check out my projects below</p>
+              <div className={style.buttonContainer}>
+                <a className={style.button} href="documents/Noah Giboney Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a className={style.button} href="https://github.com/noahgiboney" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a className={style.button} href="https://www.linkedin.com/in/noah-giboney-896847261/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </div>
             </div>
             <div className={style.faceShotContainer}>
               <img src={faceShot.src} alt="Noah Giboney" />
@@ -116,16 +121,8 @@ export default function Home({blogs, projects}: HomeProps) {
         <h3 id="contact">Contact</h3>
         <div id='sectionLine'></div>
         <section className={style.contactContainer}>
-          <p>Feel free to reach out to me on <a href="https://www.linkedin.com/in/noah-giboney-896847261/" className="link">LinkedIn</a>, also available through email at <a href="mailto:noahgiboney@gmail.com" className="link">noahgiboney@gmail.com</a>.</p>
-          <br></br>
-          <p>Check out my Resume, GitHub, and LinkedIn below!</p>
-          <div className={style.buttonContainer}>
-            <a className={style.button} href="documents/Noah Giboney Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-            <a className={style.button} href="https://github.com/noahgiboney" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a className={style.button} href="https://www.linkedin.com/in/noah-giboney-896847261/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          </div>
+          <ContactForm/>
         </section>
-        <Contact/>
       </div>
     </div>
   );

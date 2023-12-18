@@ -21,29 +21,29 @@
   font-size: 1rem;
 }     
   
-  .project h2 {
-    padding-bottom: 15px;
-    font-weight: bold;
-    font-size: 1.7rem;
-  }
+.project h2 {
+  padding-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
    
-  .project h1{ 
-    color: var(--background);
-    font-size: 1rem; 
-    padding-bottom: 20px;
-    font-style: italic;
-  }
+.project h1{ 
+  color: var(--background);
+  font-size: 1rem; 
+  padding-bottom: 20px;
+  font-style: italic;
+}
   
-  .project p {
-    padding-bottom: 20px;
-  }
+.project p {
+  padding-bottom: 20px;
+}
   
-  .project:hover{
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 1);
-    cursor: pointer;
-    transform: scale(1.0055);
-  }
+.project:hover{
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 1);
+  cursor: pointer;
+  transform: scale(1.0055);
+}
 
-  .skills p{
-    color: #48494B;
-  }
+.skills p{
+  color: #48494B;
+}

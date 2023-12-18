@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import style from '@/styles/contactForm.module.css'
 import { Megrim } from 'next/font/google';
 
-export const Contact = () => {
+export default function ContactForm () {
   const form = useRef();
 
   const sendEmail = (e) => {

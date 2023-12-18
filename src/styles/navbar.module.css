@@ -17,7 +17,7 @@
 }
 
 .navigation .navBtn{
-    padding: 5px;
+    padding: 5px 5px 0px;
     cursor: pointer;
     background: transparent;
     outline: none;

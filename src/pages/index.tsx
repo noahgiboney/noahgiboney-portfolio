@@ -2,7 +2,7 @@ import linkedinIcon from 'images/icons/linkedin.png';
 import githubIcon from 'images/icons/github.png';    
 import mailIcon from 'images/icons/mail.png';  
 import style from '@/styles/index.module.css'
-import faceShot from 'images/faceShot.png';
+import faceShot from 'images/faceshot.png';
 import VantaFog from '@/components/VantaGlobe/vantaGlobe';
 import Blog from '@/database/blogSchema';
 import connectDB from '@/database/helpers/db';

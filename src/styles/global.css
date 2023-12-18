@@ -1,0 +1,34 @@
+* {  
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+  color: #655699 ;
+  }
+
+.round {
+  border-radius: 50%;
+  border: 1px black solid;
+}
+
+#sectionLine {
+  height: 3px;
+  width: 60%;
+  background-color: #655699;
+  margin: 50px 0;
+}
+
+h3 {
+  color: #020203;
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 100px;
+}
+

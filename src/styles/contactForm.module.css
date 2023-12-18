@@ -1,0 +1,35 @@
+.contactFormContainer{
+    display: flex;
+    flex-direction: column; 
+    height: 300px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contactFormContainer label {
+    margin: 0px 20px;
+}
+
+.innnerContainer{
+    flex-direction: row;
+}
+
+.messageContainer{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.messageContainer label{
+    padding-bottom: 10px;
+}
+
+.messageContainer textarea {
+    resize: none;;
+    height: 100px;
+    width: 100%;
+}
+
+

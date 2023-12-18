@@ -1,0 +1,50 @@
+.mainContainer{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tableOfContents ul li{
+    display: inline;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 0px 10px 0px;
+}
+
+.tableOfContents ul li:hover{
+    text-decoration: underline;
+}
+
+.subSection{
+    /* border: 1px red solid; */
+    height: auto;
+    width: 75%;
+    align-items: baseline;
+    margin: 0px 100px 0px;
+}
+
+.subSection h2{
+  color: #020203;
+  font-size: 2.5rem;
+  padding: 50px 0px 20px;
+  padding-left: 10%;
+}
+
+.subSection p {
+    font-size: 1.5rem;
+    line-height: 30px;
+}
+
+.subSection img{
+    justify-content: center;
+    padding: 50px;
+    height: 550px;
+}
+
+.imageContainer{
+    text-align: center;
+    justify-content: center;
+}

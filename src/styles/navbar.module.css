@@ -1,0 +1,41 @@
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    position: fixed;
+    margin-top: 15px;
+    font-weight: bold;
+    z-index: 999;
+}
+
+.navigation ul{
+    list-style: none;
+    background-color: rgba(178, 170, 207, 1);
+    border-radius: 20px;
+    padding: 10px 5px 10px;
+}
+
+.navigation ul li {
+    display: inline;
+    margin: 1rem;
+}
+
+.navigation ul li a {
+    color: #020203;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.navigation ul li a:hover{
+    color: #655699;
+}
+
+@media screen and (max-width: 600px){
+    .navigation ul li a{
+        font-size: 0.6rem;
+    }
+    .navigation ul{
+        padding: 0px 0px 5px;
+    }
+} 

@@ -1,0 +1,33 @@
+{
+  "name": "noahgiboney.app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@types/mongoose": "^5.11.97",
+    "aws4": "^1.12.0",
+    "minimatch": "^9.0.3",
+    "mongodb": "^6.3.0",
+    "mongoos": "^0.0.1-security",
+    "mongoose": "^8.0.1",
+    "next": "14.0.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "run": "^1.4.0",
+    "three": "^0.158.0",
+    "vanta": "^0.5.24"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/three": "^0.158.2",
+    "typescript": "^5"
+  }
+}

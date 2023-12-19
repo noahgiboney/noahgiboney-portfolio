@@ -151,6 +151,10 @@
     align-items: center;
   }
 
+  .textContainer{
+    margin: 0 50px 0;
+  }
+
   .textContainer h4{
     font-size: 1.75rem;
   }

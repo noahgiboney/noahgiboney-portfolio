@@ -100,15 +100,15 @@
 }
 
 .aboutContainer{
-  width: 80%;
-  padding: 0px 50px 0px;
+  width: 90%;
   display: flex;
   justify-content: space-evenly;
+  border: 1px solid red;
 }
 
 .textContainer {
+  border: 1px solid red;
   border-radius: 15px;
-  margin: 0px 100px;
   font-size: 1.2rem;
 }
 

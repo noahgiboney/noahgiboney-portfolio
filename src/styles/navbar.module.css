@@ -14,6 +14,7 @@
     margin: 0px 2rem;  
     text-decoration: none;
     color: var(--text);
+    font-size: 1.8vh;
 }
 
 .navigation .navBtn{
@@ -74,10 +75,6 @@
 
 .navigation a:hover{
     color: var(--accent);
-}
-
-.naviagtion{
-    text-decoration: underline;
 }
 
 .logo {

@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <RootLayout>
       <Head>
         <title>Noah Giboney Portfolio</title>
-        <meta name="description" content="Personal Website For Noah Giboney" />
+        <meta name="description" content="Noah Giboney's Personal Website "/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <Component {...pageProps} />

@@ -100,7 +100,7 @@
 .textContainer {
   width: 50%;
   border-radius: 15px;
-  line-height: 30px;
+  line-height: 3vh;
 }
 
 .textContainer h2 {

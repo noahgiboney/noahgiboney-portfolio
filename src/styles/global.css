@@ -57,6 +57,7 @@ h3 {
 }
 
 .button:hover {
+  cursor: pointer;
   background-color: #655699;
   color: var(--background);
 }

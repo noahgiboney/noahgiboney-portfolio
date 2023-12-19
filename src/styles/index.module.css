@@ -124,6 +124,10 @@
   padding-bottom: 30px;
 }
 
+.buttonContainer {
+  padding-top: 30px;
+}
+
 .name {
   color: #655699;
 }

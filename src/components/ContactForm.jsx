@@ -38,7 +38,6 @@ export default function ContactForm() {
 
   return (
     <form ref={form} onSubmit={sendEmail} className={style.contactFormContainer}>
-          
           <label>Name:</label>
           <input 
             type="text" 

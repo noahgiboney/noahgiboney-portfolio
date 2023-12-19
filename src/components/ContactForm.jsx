@@ -37,10 +37,9 @@ export default function ContactForm() {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <div className={style.contactFormContainer}>
-        <div className={style.innerContainer}>
-          <label>Name</label>
+    <form ref={form} onSubmit={sendEmail} className={style.contactFormContainer}>
+          
+          <label>Name:</label>
           <input 
             type="text" 
             name="name" 
@@ -48,7 +47,7 @@ export default function ContactForm() {
             onChange={handleInputChange}
             id='inputName'
           />
-          <label>Email</label>
+          <label>Email:</label>
           <input 
             type="email" 
             name="email" 
@@ -56,9 +55,8 @@ export default function ContactForm() {
             onChange={handleInputChange}
             id='inputEmail'
           />
-        </div>
         <div className={style.messageContainer}>
-          <label>Message</label>
+          <label>Message:</label>
           <textarea 
             name="message" 
             value={formData.message} 
@@ -70,7 +68,6 @@ export default function ContactForm() {
           <input type="submit" value="Send" className="button"/>
           <input type="button" value="Reset" className="button" onClick={resetForm}/>
         </div>
-      </div>
     </form>
   );
 }

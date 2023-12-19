@@ -89,9 +89,12 @@ export default function Home({blogs, projects}: HomeProps) {
             <div className={style.textContainer}>
               <h2>My name is <span className="name">Noah Giboney</span></h2>
               <h4>CS @ Cal Poly Slo</h4>
-              <p>I'm a computer science major at Cal Poly, San Luis Obispo.</p>
-              <p>Currently interested in iOS Development and Software Engineering</p>
-              <p>Connect with me on <a href="https://www.linkedin.com/in/noah-giboney-896847261/" className="link">LinkedIn</a> and check out my projects below</p>
+              <div className={style.innerText}>
+              <p>I'm a third year computer science major at Cal Poly, San Luis Obispo, interested 
+                in iOS Development and Software Engineering. Connect with me on <a href="https://www.linkedin.com/in/noah-giboney-896847261/" className="link">LinkedIn </a> 
+                 and check out my projects below.
+              </p>
+              </div>
               <div className={style.buttonContainer}>
                 <a className="button" href="documents/Noah Giboney Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
                 <a className="button" href="https://github.com/noahgiboney" target="_blank" rel="noopener noreferrer">GitHub</a>

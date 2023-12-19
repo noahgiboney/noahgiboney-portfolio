@@ -95,11 +95,9 @@
   width: 90%;
   display: flex;
   justify-content: space-evenly;
-  border: 1px solid red;
 }
 
 .textContainer {
-  border: 1px solid red;
   border-radius: 15px;
   font-size: 1.2rem;
 }
@@ -117,6 +115,7 @@
 }
 
 .buttonContainer {
+  align-items: center;
   margin-top: 30px;
   text-align: center;
 }
@@ -162,10 +161,6 @@
 
   .faceShotContainer img {
     margin-top: 20px;
-  }
-
-  .buttonContainer{
-    scale: 0.8;
   }
 }
 

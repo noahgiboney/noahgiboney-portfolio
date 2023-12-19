@@ -54,11 +54,24 @@ h3 {
   transition: all 0.3s; 
   border-radius: 5px;
   font-weight: bold;
+  font-size: 1.7vh;
 }
 
 .button:hover {
   cursor: pointer;
   background-color: #655699;
   color: var(--background);
+}
+
+@media screen and (max-width: 1024px) {
+  .button{
+    padding: 8px 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .button{
+    padding: 6px 10px;
+  }
 }
 

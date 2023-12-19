@@ -86,7 +86,6 @@ export default function Home({blogs, projects}: HomeProps) {
         <h3 id="about">About</h3> 
         <div id='sectionLine'></div>
         <section className={style.aboutContainer}> 
-          <div className={style.innerAboutContainer}>
             <div className={style.textContainer}>
               <h2>My name is <span className="name">Noah Giboney</span></h2>
               <h4>CS @ Cal Poly Slo</h4>
@@ -102,7 +101,6 @@ export default function Home({blogs, projects}: HomeProps) {
             <div className={style.faceShotContainer}>
               <img src={faceShot.src} alt="Noah Giboney" />
             </div>
-          </div>
         </section>
 
         <h3 id="portfolio">Portfolio</h3>

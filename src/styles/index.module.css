@@ -42,11 +42,11 @@
 }
 
 @media screen and (max-width: 600px) {
-  .home-container h2 {
+  .homeContainer h2 {
     font-size: 2.5rem;
   }
 
-  .socials-container img {
+  .socialsContainer img {
     width: 40px;
     height: 40px;
     margin: 20px;
@@ -148,6 +148,14 @@
   .aboutContainer {
     flex-direction: column;
     align-items: center;
+  }
+
+  .textContainer h4{
+    font-size: 1.75rem;
+  }
+
+  .textContainer h2{
+    font-size: 2rem;
   }
 
   .textContainer p {

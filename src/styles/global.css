@@ -16,6 +16,10 @@ html{
   scroll-behavior: smooth;
 }
 
+p{
+  color: var(--text);
+}
+
 a{
   text-decoration: none;
   color: #655699 ;
@@ -40,7 +44,20 @@ h3 {
   padding-top: 100px;
 }
 
-p{
+.button {
+  text-decoration: none;
+  background-color: var(--background);
   color: var(--text);
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid #020203;
+  transition: all 0.3s; 
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #655699;
+  color: var(--background);
 }
 

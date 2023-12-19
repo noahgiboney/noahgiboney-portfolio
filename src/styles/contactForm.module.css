@@ -1,9 +1,12 @@
 .contactFormContainer{
     display: flex;
     flex-direction: column; 
-    height: 300px;
     align-items: center;
     justify-content: space-evenly;
+    background-color: var(--primary);
+    padding: 30px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
 
 .contactFormContainer label {
@@ -23,7 +26,8 @@
 }
 
 .messageContainer label{
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .messageContainer textarea {
@@ -32,4 +36,10 @@
     width: 100%;
 }
 
+.buttonContainer {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 

@@ -94,9 +94,9 @@ export default function Home({blogs, projects}: HomeProps) {
               <p>Currently interested in iOS Development and Software Engineering</p>
               <p>Connect with me on <a href="https://www.linkedin.com/in/noah-giboney-896847261/" className="link">LinkedIn</a> and check out my projects below</p>
               <div className={style.buttonContainer}>
-                <a className={style.button} href="documents/Noah Giboney Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-                <a className={style.button} href="https://github.com/noahgiboney" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a className={style.button} href="https://www.linkedin.com/in/noah-giboney-896847261/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a className="button" href="documents/Noah Giboney Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                <a className="button" href="https://github.com/noahgiboney" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a className="button" href="https://www.linkedin.com/in/noah-giboney-896847261/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               </div>
             </div>
             <div className={style.faceShotContainer}>
@@ -120,9 +120,7 @@ export default function Home({blogs, projects}: HomeProps) {
 
         <h3 id="contact">Contact</h3>
         <div id='sectionLine'></div>
-        <section className={style.contactContainer}>
-          <ContactForm/>
-        </section>
+        <ContactForm/>
       </div>
     </div>
   );

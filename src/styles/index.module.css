@@ -165,38 +165,3 @@
   font-size: 1.2rem;
 }
 
-.contactContainer {
-  width: 100%;
-  height: auto;
-  padding: 50px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contactContainer p {
-  text-align: center;
-  margin: 0px 20px;
-  font-size: 1.2rem;
-}
-
-.buttonContainer{
-  padding-top: 50px;
-}
-
-.buttonContainer .button {
-  text-decoration: none;
-  color: #020203;
-  margin: 10px;
-  padding: 10px 20px;
-  border: 1px solid #020203;
-  transition: all 0.3s; 
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.buttonContainer .button:hover {
-  background-color: #655699;
-  color: white;
-}
-

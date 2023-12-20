@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import style from '@/styles/videoPlayer.module.css'
 
 interface VideoProps{
     src: string
@@ -7,10 +8,12 @@ interface VideoProps{
 
 const VideoPlayer: React.FC<VideoProps> = ({ src }) => {
   return (
-    <video width="300px" controls>
-      <source src={src} type="video/mp4" />
-      Unable to load the video
-    </video>
+    <div className={style.videoContainer}>
+      <video controls>
+         <source src={src} type="video/mp4" />
+         Unable to load the video
+       </video>
+    </div>
   );
 };
 

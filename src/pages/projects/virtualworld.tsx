@@ -40,7 +40,7 @@ export default function Home() {
         </section>
 
         <section className={style.subSection}>
-          <h2 id=''>Pathingfinding</h2>
+          <h2 id=''>Pathfinding</h2>
           <p>With the given code base, the entities had a problematic movement, they only moved in a single step fashion where they check the neighboring points without consiering the full path. This resulted them in getting stuck from moving quite often. To combat this, I implemented the a-star pathing algorythm</p>
           <br></br>
           <p>It combines Dijkstra's algorithm's thoroughness with a heuristic-based approach for efficiency. By calculating the total cost of a path as the sum of the actual start-to-node cost (g(n)) and the estimated node-to-goal cost (h(n)), A* intelligently prioritizes nodes that seem closer to the goal. The algorithm iteratively explores adjacent nodes, expanding its search based on the lowest combined cost (f(n) = g(n) + h(n)). Its effectiveness hinges on the heuristic's accuracy: a well-chosen heuristic can significantly reduce the search area, making A* faster. Provided the heuristic is admissible, meaning it never overestimates the actual cost to the goal, A* ensures the discovery of the shortest path, balancing exploration and targeted searching.</p>

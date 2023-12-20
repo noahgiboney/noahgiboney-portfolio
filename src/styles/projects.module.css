@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+.mainContainer h3{
+    padding-top: 10vh;
+}
+
 .tableOfContents ul li{
     display: inline;
     text-decoration: none;
@@ -28,7 +32,7 @@
 
 .subSection h2{
   color: #020203;
-  font-size: 2.5rem;
+  font-size: 5vh;
   padding: 50px 0px 20px;
   padding-left: 10%;
 }
@@ -40,8 +44,9 @@
 
 .subSection img{
     justify-content: center;
-    padding: 50px;
-    height: 550px;
+    width: 80vh;
+    margin: 30px 0px;
+    border: 1.5px solid black;
 }
 
 .imageContainer{

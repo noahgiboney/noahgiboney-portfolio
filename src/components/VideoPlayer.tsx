@@ -7,7 +7,7 @@ interface VideoProps{
 
 const VideoPlayer: React.FC<VideoProps> = ({ src }) => {
   return (
-    <video width="320" height="240" controls>
+    <video width="300px" controls>
       <source src={src} type="video/mp4" />
       Unable to load the video
     </video>

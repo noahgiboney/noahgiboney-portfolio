@@ -1,5 +1,6 @@
 import style from '@/styles/projects.module.css'
 import UML from 'images/virtualworld/UML.png'
+import VideoPlayer from '@/components/VideoPlayer';
 
 export default function Home() {
     return (
@@ -28,6 +29,9 @@ export default function Home() {
         <section className={style.subSection}>
           <h2 id='two'>Demo</h2>
           <p>The project in action.</p>
+          <div className={style.imageContainer}>
+            <VideoPlayer src="/videos/VirtualWorldDemo.mp4"/>
+          </div>
         </section>
 
         <section className={style.subSection}>
@@ -47,7 +51,6 @@ export default function Home() {
           <br></br>
           <p>This is the how the entitys move with the a-star pathfinding implemented. They are able to ajust their path as needed</p>
         </section>
-
       </section>
     );
   }

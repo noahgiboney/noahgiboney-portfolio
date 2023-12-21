@@ -1,6 +1,6 @@
 import React from 'react';
 import { IBlog } from '@/database/blogSchema';
-import style from '@/styles/blogPreview.module.css'
+import style from '@/styles/blog/blogPreview.module.css'
 import Link from 'next/link';
 
 interface BlogComponentProps {

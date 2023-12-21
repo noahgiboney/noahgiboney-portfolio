@@ -1,10 +1,10 @@
 import style from '@/styles/index.module.css'
-import VantaFog from '@/components/VantaGlobe/vantaGlobe';
+import VantaFog from '@/components/vanta/vantaGlobe';
 import Blog from '@/database/blogSchema';
 import connectDB from '@/database/helpers/db';
 import {IBlog} from '@/database/blogSchema'
 import Project, {IProject} from '@/database/projectSchema'
-import BlogPreviewComponent from '@/components/Blog/BlogPreviewComponent';
+import BlogPreviewComponent from '@/components/blog/BlogPreviewComponent';
 import ProjectComponent from '@/components/ProjectPreview';
 import ContactForm from '@/components/ContactForm'
 

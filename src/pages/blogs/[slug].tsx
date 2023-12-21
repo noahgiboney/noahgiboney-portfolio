@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { GetServerSideProps, NextPage } from 'next';
 import { IBlog } from '@/database/blogSchema';
 import style from '@/styles/blog.module.css';
-import Comment from '@/components/Blog/Comment';
-import CommentForm from '@/components/Blog/CommentForm'; 
+import Comment from '@/components/blog/Comment';
+import CommentForm from '@/components/blog/CommentForm'; 
 
 interface BlogPageProps {
   slug: string;

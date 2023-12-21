@@ -1,5 +1,5 @@
 import React from 'react';
-import projects from '@/components/Portfolio/projects'; 
+import projects from '@/components/portfolio/projects'; 
 import Style from '@/components/Portfolio/portfolio.module.css'
 import Link from 'next/link';
 

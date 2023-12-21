@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { GetServerSideProps, NextPage } from 'next';
 import { IBlog } from '@/database/blogSchema';
-import style from '@/styles/blog.module.css';
+import style from '@/styles/blog/blog.module.css';
 import Comment from '@/components/blog/Comment';
 import CommentForm from '@/components/blog/CommentForm'; 
 

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import style from '@/styles/blog/commentForm.module.css'
+import style from '@/styles/inputForm.module.css'
 
 
 type AddCommentProps = {
@@ -36,7 +36,7 @@ const CommentForm: React.FC<AddCommentProps> = ({ blogSlug, onCommentAdded }) =>
     };
 
     return (
-        <form onSubmit={submitComment} className={style.commentFormContainer}>
+        <form onSubmit={submitComment} className={style.inputFormContainer}>
             <input
                 type="text"
                 value={userName}

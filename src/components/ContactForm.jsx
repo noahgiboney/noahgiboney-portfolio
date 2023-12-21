@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import style from '@/styles/contactForm.module.css';
+import style from '@/styles/inputForm.module.css';
 
 export default function ContactForm() {
   const form = useRef();
@@ -37,32 +37,30 @@ export default function ContactForm() {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail} className={style.contactFormContainer}>
-          <label>Name:</label>
+    <form ref={form} onSubmit={sendEmail} className={style.inputFormContainer}>
           <input 
+            placeholder="Your Name"
+            name='name'
             type="text" 
-            name="name" 
             value={formData.name} 
             onChange={handleInputChange}
             id='inputName'
           />
-          <label>Email:</label>
           <input 
-            type="email" 
-            name="email" 
+            placeholder="Your Email"
+            type="email"  
+            name=''
             value={formData.email} 
             onChange={handleInputChange}
             id='inputEmail'
           />
-        <div className={style.messageContainer}>
-          <label>Message:</label>
           <textarea 
-            name="message" 
+            placeholder="Message" 
+            name='message'
             value={formData.message} 
             onChange={handleInputChange}
             id='inputMessage'
           />
-        </div>
         <div className={style.buttonContainer}>
           <input type="submit" value="Send" className="button"/>
           <input type="button" value="Reset" className="button" onClick={resetForm}/>

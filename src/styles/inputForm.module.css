@@ -1,4 +1,4 @@
-.commentFormContainer {
+.inputFormContainer {
     display: flex;
     flex-direction: column;
     width: 65%;
@@ -12,7 +12,7 @@
     margin: auto; 
 }
 
-.commentFormContainer button {
+.inputFormContainer button {
     font-size: 1rem; 
     border: none;
     padding: 10px 20px;
@@ -20,8 +20,8 @@
     cursor: pointer; 
 }
 
-.commentFormContainer input,
-.commentFormContainer textarea {
+.inputFormContainer input,
+.inputFormContainer textarea {
     width: 90%; 
     padding: 10px;
     margin-bottom: 15px; 
@@ -30,18 +30,23 @@
     outline: none; 
 }
 
-.commentFormContainer input:focus,
-.commentFormContainer textarea:focus {
+.inputFormContainer input:focus,
+.inputFormContainer textarea:focus {
     border-color: var(--secondary); 
 }
 
-.commentFormContainer textarea {
+.inputFormContainer textarea {
     resize: vertical; 
     min-height: 100px; 
 }
 
+.buttonContainer{
+    display: flex;
+    flex-direction: row;
+}
+
 @media (max-width: 768px) {
-    .commentFormContainer {
+    .inputFormContainer {
         width: 90%; 
     }
 }

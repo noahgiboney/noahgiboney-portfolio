@@ -1,8 +1,4 @@
-import linkedinIcon from 'images/icons/linkedin.png'; 
-import githubIcon from 'images/icons/github.png';    
-import mailIcon from 'images/icons/mail.png';  
 import style from '@/styles/index.module.css'
-import faceShot from 'images/faceshot.png';
 import VantaFog from '@/components/VantaGlobe/vantaGlobe';
 import Blog from '@/database/blogSchema';
 import connectDB from '@/database/helpers/db';
@@ -66,13 +62,13 @@ export default function Home({blogs, projects}: HomeProps) {
           <h2>Noah Giboney</h2>
           <div className={style.socialsContainer}>
             <a href="https://www.linkedin.com/in/noah-giboney-896847261/" target="_blank">
-              <img src={linkedinIcon.src} className="round" alt="LinkedIn"/>
+              <img src="/images/icons/linkedin.png" className="round" alt="LinkedIn"/>
             </a>
             <a href="https://github.com/noahgiboney" target="_blank">
-              <img src={githubIcon.src} className="round" alt="GitHub"/>
+              <img src="/images/icons/github.png" className="round" alt="GitHub"/>
             </a>
             <a href="#contact">
-              <img src={mailIcon.src}  className="round" alt="Email"/>
+              <img src="/images/icons/mail.png"  className="round" alt="Email"/>
             </a>
           </div>   
         </section>
@@ -102,7 +98,7 @@ export default function Home({blogs, projects}: HomeProps) {
               </div>
             </div>
             <div className={style.faceShotContainer}>
-              <img src={faceShot.src} alt="Noah Giboney" />
+              <img src="/images/faceshot.png" alt="Noah Giboney Faceshot" />
             </div>
         </section>
 

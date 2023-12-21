@@ -1,17 +1,22 @@
 .blogContainer{
-    height: 93.5vh;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    justify-content: center;
+    align-items: center;
 }
 
-.blogContainer h1{
-    padding-top: 100px;
+.blogContainer h3{
+    padding-top: 10vh;
 }
 
 .blogContainer h2{
-    padding-top: 100px;
+    padding-top: 2vh;
+    font-size: 2.5vh;
 }
 
-.blogContainer article{
-    padding-top: 50px;
+.commentSection{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }

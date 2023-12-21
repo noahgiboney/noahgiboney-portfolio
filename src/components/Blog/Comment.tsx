@@ -1,4 +1,5 @@
 import { IComment } from "@/database/blogSchema";
+import style from '@/styles/comment.module.css';
 
 type CommentProps = {
     comment: IComment;
@@ -17,10 +18,11 @@ function parseCommentTime(time: Date): string {
 
 function Comment({ comment }: CommentProps) {
     return (
-        <div>
+        <div className={style.comment}>
             <h4>{comment.user}</h4>
-            <p>{comment.comment}</p>
             <span>{parseCommentTime(new Date(comment.time))}</span>
+            <p>{comment.comment}</p>
+            <div className={style.commentLine}></div>
         </div>
     );
 }

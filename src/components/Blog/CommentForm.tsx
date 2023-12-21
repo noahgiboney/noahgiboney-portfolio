@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import style from '@/styles/commentForm.module.css'
+
 
 type AddCommentProps = {
     blogSlug: string;
@@ -34,21 +36,21 @@ const CommentForm: React.FC<AddCommentProps> = ({ blogSlug, onCommentAdded }) =>
     };
 
     return (
-        <form onSubmit={submitComment}>
+        <form onSubmit={submitComment} className={style.commentFormContainer}>
             <input
                 type="text"
                 value={userName}
                 onChange={(e) => setUserName(e.target.value)}
-                placeholder="Your name"
+                placeholder="Your Name"
                 required
             />
             <textarea
                 value={commentText}
                 onChange={(e) => setCommentText(e.target.value)}
-                placeholder="Add a comment"
+                placeholder="Leave a comment"
                 required
             />
-            <button type="submit">Submit Comment</button>
+            <button type="submit" className="button">Submit Comment</button>
         </form>
     );
 };

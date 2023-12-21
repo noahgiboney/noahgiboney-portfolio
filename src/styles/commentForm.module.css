@@ -1,0 +1,27 @@
+.commentFormContainer{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    background-color: var(--primary);
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.commentFormContainer button{
+    font-size: 1.3vh;
+}
+
+.commentFormContainer input{
+    width: 40%;
+    margin-right: 60%;
+    margin-left: 10%;
+    margin-bottom: 1.5vh;
+}
+
+.commentFormContainer textarea{
+    width: 80%;
+    margin-right: 10%;
+    resize: none;
+}

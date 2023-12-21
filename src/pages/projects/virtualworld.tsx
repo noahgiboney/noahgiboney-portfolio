@@ -1,6 +1,6 @@
 import style from '@/styles/projects.module.css'
 import VideoPlayer from '@/components/VideoPlayer';
-import CodeSnippet from '@/components/CodeSnippet'
+import CodeSnippet from '@/components/CodeSnippet';
 
 export default function Home() {
 
@@ -101,7 +101,7 @@ return path; //empty path
           <h2 id='one'>Overview</h2>
           <p>This virutal world was a quater long project in CSC203. Throughout the quater we applied concepts that we learned to a project that had a large exsisting code base.</p>
 
-          <CodeSnippet language='java' code={aStarAlgo}/>
+          <CodeSnippet code={aStarAlgo} language="java"showLineNumbers={true}/>
         </section>
 
         <section className={style.subSection}>

@@ -1,0 +1,7 @@
+.codeContainer{
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #2d2d2d; /* Dark background for dracula theme */
+    font-size: 1.6vh;
+}

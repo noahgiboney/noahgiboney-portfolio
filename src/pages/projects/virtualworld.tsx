@@ -101,7 +101,7 @@ return path; //empty path
           <h2 id='one'>Overview</h2>
           <p>This virutal world was a quater long project in CSC203. Throughout the quater we applied concepts that we learned to a project that had a large exsisting code base.</p>
 
-          <CodeSnippet code={aStarAlgo} language="java"showLineNumbers={true}/>
+          <CodeSnippet code={aStarAlgo} language="java"/>
         </section>
 
         <section className={style.subSection}>

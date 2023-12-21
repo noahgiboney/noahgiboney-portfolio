@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import style from '@/styles/commentForm.module.css'
+import style from '@/styles/blog/commentForm.module.css'
 
 
 type AddCommentProps = {

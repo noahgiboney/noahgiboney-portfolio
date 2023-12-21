@@ -1,5 +1,5 @@
 import { IComment } from "@/database/blogSchema";
-import style from '@/styles/comment.module.css';
+import style from '@/styles/blog/comment.module.css';
 
 type CommentProps = {
     comment: IComment;

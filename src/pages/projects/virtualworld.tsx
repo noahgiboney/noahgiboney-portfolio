@@ -1,8 +1,84 @@
 import style from '@/styles/projects.module.css'
-import UML from 'images/virtualworld/UML.png'
 import VideoPlayer from '@/components/VideoPlayer';
+import CodeSnippet from '@/components/CodeSnippet'
 
 export default function Home() {
+
+const aStarAlgo = ` public List<Point> computePath(Point start, Point end,
+  Predicate<Point> canPassThrough,
+  BiPredicate<Point, Point> withinReach,
+  Function<Point, Stream<Point>> potentialNeighbors) {
+
+List<Point> path = new LinkedList<>(); //list to store path
+
+//holds open points, sort the queue by first the fCost, then gCost
+PriorityQueue<Point> open = new PriorityQueue<>((p1, p2) -> {
+int fCompare = Integer.compare(p1.getfCost(), p2.getfCost());
+
+//if fCosts are the same, sort by gCost
+if (fCompare == 0) {
+return Integer.compare(p1.getgCost(), p2.getgCost());
+}
+else{
+return fCompare;
+}
+});
+
+HashSet<Point> closed = new HashSet<>(); //nodes that have been visited with the shortest path
+
+start.setgCost(0); //begin with g cost at zero
+start.setfCost(start.calcF(end)); //initialize first fCost
+open.add(start);
+
+while(!(open.isEmpty())){
+Point current = open.poll();// pop point with the shortest path (lowest f value)
+
+//if we reached the end then backtrack through prior nodes to add the path
+Point temp = current;
+if(withinReach.test(temp, end)){
+while(temp != null && !(temp.equals(start))) {
+path.add(0, temp);
+temp = temp.getPrior();
+}
+return path;
+}
+
+potentialNeighbors.apply(current) //get the stream of potential neighbors of current point
+.filter(canPassThrough) //make sure they are able to move through (non obstacles)
+.filter(neighbor -> !(closed.contains(neighbor))) //make sure they are not in closed list
+.forEach(neighbor -> { //iterate through valid neighbors
+
+int currentG = current.calcDistanceFromStart(start) + neighbor.calcToAdjacent(current); //hold current g value to compare
+
+if(open.contains(neighbor)) {//if neighbor is already in the open list, is the G cost better?
+if( currentG < neighbor.getgCost()){
+
+//if so, remove from list and replace its values with the lowest cost
+open.remove(neighbor);
+
+neighbor.setgCost(currentG);
+neighbor.setfCost(neighbor.calcF(end));
+neighbor.setPrior(current);
+open.add(neighbor);
+}
+}
+else{
+//if not, then continue on to set values
+// System.out.println("Adding new neighbor to open list: " + neighbor);
+
+neighbor.setgCost(current.calcDistanceFromStart(start) + neighbor.calcToAdjacent(current));
+neighbor.setfCost(neighbor.calcF(end));
+neighbor.setPrior(current);
+open.add(neighbor);
+}
+});
+
+//after all neighbors visited, add the that point to the closed list, so it is not visited anymore
+closed.add(current);
+}
+return path; //empty path
+}`;
+
     return (
       <section className={style.mainContainer}>
             
@@ -24,6 +100,8 @@ export default function Home() {
         <section className={style.subSection}>
           <h2 id='one'>Overview</h2>
           <p>This virutal world was a quater long project in CSC203. Throughout the quater we applied concepts that we learned to a project that had a large exsisting code base.</p>
+
+          <CodeSnippet language='java' code={aStarAlgo}/>
         </section>
 
         <section className={style.subSection}>
@@ -38,7 +116,7 @@ export default function Home() {
           <h2 id='three'>Refactoring</h2>
           <p>The given code base had many problems that we were tasked to fix. We first had to refactor without changing the function of any entities or their interactoin. Firstly, the classes had high coupling and low cohesion. They also relied on an enum rather the using instances of objects. There were many correct ways to approach the refactor, but the following UML represents my design.</p>
           <div className={style.imageContainer}>
-            <img src={UML.src} alt='uml diagram'></img>
+            <img src="/images/virtualworld/" alt='uml diagram'></img>
           </div>
           <p>In order to achieve high cohesion, moving around instance variables was essential, along with creating other classes to create a entity heiarchy. Having parent abstract that acted as super classes to similar behaving entities reduced repition in the code base and allowed for a concise design. Interfaces also were helpful to refactor, as they allowed me to pull a common method from classes and only have a certain class implement the trasnfrom interface if they can do this in the game.</p>
         </section>

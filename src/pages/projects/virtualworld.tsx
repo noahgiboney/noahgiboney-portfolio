@@ -116,7 +116,7 @@ return path; //empty path
           <h2 id='three'>Refactoring</h2>
           <p>The given code base had many problems that we were tasked to fix. We first had to refactor without changing the function of any entities or their interactoin. Firstly, the classes had high coupling and low cohesion. They also relied on an enum rather the using instances of objects. There were many correct ways to approach the refactor, but the following UML represents my design.</p>
           <div className={style.imageContainer}>
-            <img src="/images/virtualworld/" alt='uml diagram'></img>
+            <img src="/images/virtualworld/UML.png" alt='uml diagram'></img>
           </div>
           <p>In order to achieve high cohesion, moving around instance variables was essential, along with creating other classes to create a entity heiarchy. Having parent abstract that acted as super classes to similar behaving entities reduced repition in the code base and allowed for a concise design. Interfaces also were helpful to refactor, as they allowed me to pull a common method from classes and only have a certain class implement the trasnfrom interface if they can do this in the game.</p>
         </section>

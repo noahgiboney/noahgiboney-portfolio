@@ -47,7 +47,7 @@ h3 {
 .button {
   font-size: 1.7vh;
   font-weight: bold;
-  border: 2px solid var(--text);
+  border: 1.6px solid var(--text);
   background-color: var(--background);
   color: var(--text);
   text-decoration: none;

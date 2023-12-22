@@ -42,13 +42,13 @@ export default function Home() {
           <br></br>
           <p>The connections to various components on the back of this PCB were very close and called for carful soldering to not bridge connections. This was the end result with everything soldered.</p>  
           <div className={style.imageContainer}>
-            <img src={solder.src}></img>
+            <img src="/images/icetube/soldering.png"></img>
           </div>
           <br></br>
           <p>Throught the process, it was imporant to perform various voltage readings using a multimeter to check if =m the electrical components are functional. Doing this required care as it could be easy to cause a short</p>         
           <div className={style.imageContainer}>
-            <img src={PCB.src}></img>
-            <img src={clock2.src}></img>
+            <img src="/images/icetube/PCB.png"></img>
+            <img src="/images/icetube/clock2.png"></img>
           </div>
         </section>
 

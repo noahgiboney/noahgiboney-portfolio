@@ -45,22 +45,40 @@ h3 {
 }
 
 .button {
-  text-decoration: none;
+  font-size: 1.7vh;
+  font-weight: bold;
+  border: 2px solid var(--text);
   background-color: var(--background);
   color: var(--text);
+  text-decoration: none;
   margin: 10px;
   padding: 10px 20px;
-  border: 1px solid #020203;
-  transition: all 0.3s; 
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1.7vh;
+  position: relative;
+  z-index: 1;
+  display: inline-block; 
+  overflow: hidden; 
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent); 
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: 0 0; 
+  transition: transform 0.5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.button:hover::before {
+  transform: scaleY(1);
 }
 
 .button:hover {
-  cursor: pointer;
-  background-color: #655699;
-  color: var(--background);
+  color: white; 
 }
 
 @media screen and (max-width: 1024px) {

@@ -12,16 +12,10 @@
     margin: auto; 
 }
 
-.inputFormContainer button {
-    font-size: 1rem; 
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer; 
-}
-
 .inputFormContainer input,
 .inputFormContainer textarea {
+    font-family: inherit;
+    font-weight: bold;
     width: 90%; 
     padding: 10px;
     margin-bottom: 15px; 

@@ -62,8 +62,8 @@ export default function ContactForm() {
             id='inputMessage'
           />
         <div className={style.buttonContainer}>
-          <input type="submit" value="Send" className="button"/>
-          <input type="button" value="Reset" className="button" onClick={resetForm}/>
+          <button type="submit" value="Send" className="button">Send</button>
+          <button type="button" value="Reset" className="button" onClick={resetForm}>Reset</button>
         </div>
     </form>
   );

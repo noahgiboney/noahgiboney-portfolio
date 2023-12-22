@@ -44,6 +44,11 @@ h3 {
   padding-top: 15vh;
 }
 
+button{
+  font-size: 1.7vh;
+  font-family: inherit;
+}
+
 .button {
   font-size: 1.7vh;
   font-weight: bold;

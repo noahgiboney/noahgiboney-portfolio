@@ -13,7 +13,6 @@ interface HomeProps {
   projects: IProject[];
 }
 
-
 async function getBlogs() {
   await connectDB(); // Connect to the database
 

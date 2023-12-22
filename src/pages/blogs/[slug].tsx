@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { GetServerSideProps, NextPage } from 'next';
 import { IBlog } from '@/database/blogSchema';
 import style from '@/styles/blog/blog.module.css';
-// import Comment from '@/components/Comment';
+import Comment from '@/components/Comment';
 import CommentForm from '@/components/CommentForm'; 
 
 interface BlogPageProps {
@@ -60,13 +60,13 @@ const BlogPage: NextPage<BlogPageProps> = ({ slug }) => {
 
         <CommentForm blogSlug={slug} onCommentAdded={refreshComments} /> 
 
-        {/* {blog.comments && blog.comments.length > 0 ? (
+        {blog.comments && blog.comments.length > 0 ? (
           blog.comments.map((comment, index) => (
               <Comment key={index} comment={comment}/> 
           ))
         ) : (
           <p>No comments</p>
-        )} */}
+        )} 
         <div id='commentDivirdor'></div>
       </section>
     </div>

@@ -102,6 +102,9 @@ const aStarAlgo =
         <section className={style.subSection}>
           <h2 id='one'>Overview</h2>
           <p>This virutal world was a quater long project in CSC203. Throughout the quater we applied concepts that we learned to a project that had a large exsisting code base.</p>
+          <br></br>
+          <br></br>
+          <a className="button" href="https://github.com/noahgiboney/virtualworld" target="_blank" rel="noopener noreferrer">Repository</a>
         </section>
 
         <section className={style.subSection}>

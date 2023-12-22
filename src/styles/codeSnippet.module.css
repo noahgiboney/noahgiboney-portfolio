@@ -2,6 +2,10 @@
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
-    background-color: #2d2d2d; /* Dark background for dracula theme */
+    background-color: #2d2d2d;
     font-size: 0.9vw;
+}
+
+.codeContainer button{
+    display: none !important;
 }

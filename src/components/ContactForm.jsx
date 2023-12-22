@@ -49,7 +49,7 @@ export default function ContactForm() {
           <input 
             placeholder="Your Email"
             type="email"  
-            name=''
+            name='email'
             value={formData.email} 
             onChange={handleInputChange}
             id='inputEmail'

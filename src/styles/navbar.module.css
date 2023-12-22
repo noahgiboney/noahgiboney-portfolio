@@ -84,7 +84,7 @@
     outline: none;
     border: none;
     color: var(--background);
-    background-color: #655699;
+    background-color: var(--accent);
     border-radius: 5px;
     visibility: hidden; 
     opacity: 0;
@@ -108,9 +108,10 @@
        align-items: center;
        justify-content: center; 
        gap: 1.5rem;
-       background-color: var(--accent);
+       background-color: var(--primary);
        transition: transform 0.7s ease-in-out;  
        transform: translate(-100vw);
+       z-index: 99;
     }
 
     .navigation .responsiveNav{
@@ -125,7 +126,6 @@
 
     .navigation a {
         font-size: 1.5rem;
-        color: var(--background);
     }
 
     .navigation a:hover{

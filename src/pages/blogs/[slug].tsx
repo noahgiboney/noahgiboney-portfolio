@@ -3,7 +3,7 @@ import { GetServerSideProps, NextPage } from 'next';
 import { IBlog } from '@/database/blogSchema';
 import style from '@/styles/blog/blog.module.css';
 // import Comment from '@/components/Comment';
-import CommentForm from '@/components/blog/CommentForm'; 
+// import CommentForm from '@/components/blog/CommentForm'; 
 
 interface BlogPageProps {
   slug: string;
@@ -58,7 +58,7 @@ const BlogPage: NextPage<BlogPageProps> = ({ slug }) => {
         <h2>Comments</h2>
         <div id='sectionLine'></div>
 
-        <CommentForm blogSlug={slug} onCommentAdded={refreshComments} />
+        {/* <CommentForm blogSlug={slug} onCommentAdded={refreshComments} /> */}
 
         {/* {blog.comments && blog.comments.length > 0 ? (
           blog.comments.map((comment, index) => (

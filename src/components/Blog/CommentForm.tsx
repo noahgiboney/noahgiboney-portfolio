@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import style from '@/styles/inputForm.module.css'
 
-
 type AddCommentProps = {
     blogSlug: string;
     onCommentAdded: () => void;

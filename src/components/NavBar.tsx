@@ -15,10 +15,12 @@ export default function NavBar() {
   return (
     <header className={style.navigation}>
       <div className={style.logo}>
-        <h1>NG</h1>
-        <div className={style.line}></div>
+        <Link href={'/'}>
+          <h1>NG</h1>
+          <div className={style.line}></div>
+        </Link>
       </div>  
-      <nav ref={navRef}> 
+      <nav ref={navRef} className={style.navLinks}> 
           <Link href={'/'} onClick={showNavBar}>Home</Link>
           <Link href={'/#about'} onClick={showNavBar}>About</Link>
           <Link href={'/#portfolio'} onClick={showNavBar}>Portfolio</Link>

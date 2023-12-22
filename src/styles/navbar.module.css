@@ -1,4 +1,5 @@
 .navigation {
+    color: var(--text);
     width: 100%;
     display: flex;
     align-items: center;
@@ -10,16 +11,55 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.navigation a {
+.logo h1{
+    color: var(--text);
+}
+
+.logo {
+    background-color: var(--background);
+    border: 0px solid black;
+    color: var(--text);
+    text-decoration: none;
+    margin: 10px;
+    position: relative;
+    z-index: 1;
+    display: inline-block; 
+    overflow: hidden; 
+  }
+  
+  .logo::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent); 
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: 0 0; 
+    transition: transform 0.5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  }
+  
+  .logo:hover::before {
+    transform: scaleY(1);
+  }
+  
+  .logo:hover h1 {
+    color: white; 
+  }
+
+.navLinks a {
     margin: 0px 2rem;
     text-decoration: none;
     color: var(--text);
     font-size: 1.8vh;
     position: relative; 
     display: inline-block; 
+    cursor: pointer;
 }
 
-.navigation a::after {
+.navLinks a::after {
     content: '';
     position: absolute;
     bottom: -5px; 
@@ -32,8 +72,8 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.navigation a:hover::after,
-.navigation a:focus::after {
+.navLinks a:hover::after,
+.navLinks a:focus::after {
     transform: scaleX(1);
 }
 

@@ -11,10 +11,30 @@
 }
 
 .navigation a {
-    margin: 0px 2rem;  
+    margin: 0px 2rem;
     text-decoration: none;
     color: var(--text);
     font-size: 1.8vh;
+    position: relative; 
+    display: inline-block; 
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: var(--accent); 
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navigation a:hover::after,
+.navigation a:focus::after {
+    transform: scaleX(1);
 }
 
 .navigation .navBtn{
@@ -71,10 +91,6 @@
     .navigation a:hover{
         color: var(--text);
     }
-}
-
-.navigation a:hover{
-    color: var(--accent);
 }
 
 .logo {

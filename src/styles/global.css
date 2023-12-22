@@ -47,6 +47,7 @@ h3 {
 button{
   font-size: 1.7vh;
   font-family: inherit;
+  cursor: pointer;
 }
 
 .button {

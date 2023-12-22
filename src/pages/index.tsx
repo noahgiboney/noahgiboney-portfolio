@@ -4,8 +4,8 @@ import Blog from '@/database/blogSchema';
 import connectDB from '@/database/helpers/db';
 import {IBlog} from '@/database/blogSchema'
 import Project, {IProject} from '@/database/projectSchema'
-import BlogPreviewComponent from '@/components/blog/BlogPreviewComponent';
-import ProjectComponent from '@/components/ProjectPreview';
+import BlogPreviewComponent from 'src/components/blog/BlogPreviewComponent';
+import ProjectComponent from 'src/components/ProjectPreview';
 import ContactForm from '@/components/ContactForm'
 
 interface HomeProps {

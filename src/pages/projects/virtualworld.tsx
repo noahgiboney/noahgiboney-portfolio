@@ -136,7 +136,7 @@ const aStarAlgo =
             the entity. I used a linkedlist to store the path and a priority queue hold open points, sorted by the fCost then the gCost. I also used a
             HashSet for the closed list for quick lookup times.
           </p>
-           <CodeSnippet code={aStarAlgo} language="java"/>
+           {/* <CodeSnippet code={aStarAlgo} language="java"/> */}
         </section>
 
         <section className={style.subSection}>

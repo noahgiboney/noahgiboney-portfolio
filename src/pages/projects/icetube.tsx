@@ -1,8 +1,7 @@
 import style from '@/styles/projects.module.css'
 import solder from 'images/icetube/soldering.png'
 import PCB from 'images/icetube/PCB.png'
-import clock1 from 'images/icetube/clock1.png'
-import clock2 from 'images/icetube/clock2.png'
+import clock2 from '/images/icetube/clock2.png'
 
 
 export default function Home() {
@@ -33,7 +32,7 @@ export default function Home() {
           <h2 id='two'>Result</h2>
           <p>This is the resulting alarm clock that I will be using daily to wake up.</p>
           <div className={style.imageContainer}>
-            <img src={clock1.src}></img>
+            <img src="/images/icetube/clock1.png"></img>
           </div>
         </section>
 

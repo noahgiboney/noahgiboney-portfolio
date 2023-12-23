@@ -83,14 +83,6 @@
   align-items: center;
 }
 
-.mainContainer p,
-.mainContainer label {
-  font-weight: bold;
-  color: #020203;
-  padding-bottom: 10px;
-  font-size: 2vh;
-}
-
 .aboutContainer{
   width: 90%;
   display: flex;

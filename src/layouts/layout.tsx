@@ -10,9 +10,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
+  //ensures nav bar is top z index
+  const headroomStyle = {
+    zIndex: 1000
+  };
+
   return (
       <div className={jose.className}>
-        <Headroom>
+        <Headroom style={headroomStyle}>
           <NavBar/>
         </Headroom>
           {children}

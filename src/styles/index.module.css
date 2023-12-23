@@ -97,13 +97,11 @@
 
 .textContainer h2 {
   font-size: 4vh;
-  color: #020203;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .textContainer h4{
   font-size: 3vh;
-  color: #020203;
   padding-bottom: 30px;
 }
 
@@ -114,10 +112,11 @@
 }
 
 .name {
-  color: #655699;
+  color: var(--accent);
 }
 
 .textContainer p {
+  font-size: 1.5em;
   padding-bottom: 8px;
 }
 
@@ -130,14 +129,12 @@
 
 @media screen and (max-width: 700px) {
   .aboutContainer {
-    flex-wrap: wrap;
-    text-align: left;
     flex-direction: column;
     align-items: center;
   }
 
   .textContainer{
-    width: 80%;
+    width: 100%;
   }
 
   .textContainer h4{

@@ -82,7 +82,7 @@ export default function Home({blogs, projects}: HomeProps) {
         <div id='sectionLine'></div>
         <section className={style.aboutContainer}> 
             <div className={style.textContainer}>
-              <h2>My name is <span className="name">Noah Giboney</span></h2>
+              <h2>My name is <span className={style.name}>Noah Giboney</span></h2>
               <h4>CS @ Cal Poly Slo</h4>
               <div className={style.innerText}>
               <p>I'm a third year computer science major at Cal Poly, San Luis Obispo, interested 

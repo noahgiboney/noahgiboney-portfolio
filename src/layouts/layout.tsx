@@ -3,7 +3,7 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Headroom from 'react-headroom'
 
-const jose = Josefin_Sans({ subsets: ['vietnamese'], weight: ['100']})
+const jose = Josefin_Sans({ subsets: ['vietnamese'], weight: ['200']})
 
 export default function RootLayout({
   children,

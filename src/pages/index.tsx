@@ -103,11 +103,12 @@ export default function Home({blogs, projects}: HomeProps) {
 
         <h3 id="portfolio">Portfolio</h3>
         <div id='sectionLine'></div>
-          <p>Click each project for more information.</p>
-          <ProjectComponent projects={projects}/>
+        <h4>Click each project for more information.</h4>
+        <ProjectComponent projects={projects}/>
         
         <h3 id="blogs">Blogs</h3>
         <div id='sectionLine'></div>
+        <h4>Click to see more.</h4>
         <BlogPreviewComponent blogs={blogs}/>
 
         <h3 id="contact">Contact</h3>

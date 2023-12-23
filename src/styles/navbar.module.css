@@ -131,6 +131,10 @@
     .navigation a:hover{
         color: var(--text);
     }
+
+    .logo a{
+        font-size: 1em;
+    }
 }
 
 .logo {

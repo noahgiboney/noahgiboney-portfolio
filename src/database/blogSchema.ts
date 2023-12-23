@@ -1,5 +1,4 @@
-import { Schema } from "mongoose";
-import mongoose from "mongoose";
+import mongoose, { Schema } from 'mongoose';
 
 export type IComment = {
     user: string;
@@ -13,13 +12,32 @@ const commentSchema = new Schema<IComment>({
     time: { type: Date, required: true },
 });
 
-// Blog type and schema
+export type IContent = {
+    content: string;
+    image: string;
+};
+
+const contentSchema = new Schema<IContent>({
+    content: { type: String, required: true },
+    image: { type: String, required: false }, 
+});
+
+export type Section = {
+    title: string; 
+    sections: IContent[];
+};
+
+const sectionSchema = new Schema<Section>({
+    title: { type: String, required: true },
+    sections: [contentSchema], 
+});
+
 export type IBlog = {
     title: string;
     slug: string;
     date: string;
     description: string;
-    content: string;
+    content: Section[]; 
     comments: IComment[];
 };
 
@@ -28,7 +46,7 @@ export const blogSchema = new Schema<IBlog>({
     slug: { type: String, required: true },
     date: { type: String, required: false },
     description: { type: String, required: true },
-    content: { type: String, required: true },
+    content: [sectionSchema], 
     comments: [commentSchema],
 });
 

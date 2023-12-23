@@ -3,7 +3,17 @@ import { GetServerSideProps, NextPage } from 'next';
 import { IBlog } from '@/database/blogSchema';
 import style from '@/styles/blog/blog.module.css';
 import Comment from '@/components/Comment';
-import CommentForm from '@/components/CommentForm'; 
+import CommentForm from '@/components/CommentForm';
+
+export type IContent = {
+  content: string;
+  image: string;
+};
+
+export type ISection = {
+  title: string;
+  sections: IContent[];
+};
 
 interface BlogPageProps {
   slug: string;
@@ -50,10 +60,23 @@ const BlogPage: NextPage<BlogPageProps> = ({ slug }) => {
 
   return (
     <div className={style.blogContainer}>
-      <h3>{blog.title}</h3>
-      <h2>{blog.date}</h2>
+      <h1>{blog.title}</h1>
+      <p>{blog.date}</p>
       <div id='sectionLine'></div>
-      <article>{blog.content}</article>
+
+      {/* Render each content section */}
+      {Array.isArray(blog.content) && blog.content.map((section: ISection, index: number) => (
+        <article key={index}>
+          <h3>{section.title}</h3>
+          {Array.isArray(section.sections) && section.sections.map((content: IContent, contentIndex: number) => (
+            <div key={contentIndex}>  {/* Changed from <section> to <div> to avoid HTML element conflict */}
+              <p>{content.content}</p>
+              {content.image && <img src={content.image} alt="Content" />}
+            </div>
+          ))}
+        </article>
+      ))}
+
       <section className={style.commentSection}>
         <h2>Comments</h2>
         <div id='sectionLine'></div>
@@ -65,7 +88,7 @@ const BlogPage: NextPage<BlogPageProps> = ({ slug }) => {
               <Comment key={index} comment={comment}/> 
           ))
         ) : (
-          <p>No comments</p>
+          <p>No comments yet. Be the first to comment!</p>
         )} 
         <div id='commentDivirdor'></div>
       </section>

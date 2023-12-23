@@ -96,13 +96,43 @@
 }
 
 .textContainer h2 {
-  font-size: 3.5vh;
+  font-size: 2.75em;
   padding-bottom: 30px;
 }
 
 .textContainer h4{
-  font-size: 2.5vh;
+  font-size: 2em;
   padding-bottom: 30px;
+}
+
+@media screen and (max-width: 1000px){
+  .textContainer h2 {
+    font-size: 2em;
+  }
+  
+  .textContainer h4{
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 760px){
+  .textContainer h2 {
+    font-size: 1.5em;
+  }
+  
+  .textContainer h4{
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .textContainer h2 {
+    font-size: 1.5em;
+  }
+  
+  .textContainer h4{
+    font-size: 1em;
+  }
 }
 
 .buttonContainer {
@@ -136,14 +166,6 @@
   .textContainer{
     width: 100%;
   }
-
-  /* .textContainer h4{
-    font-size: 1.75rem;
-  }
-
-  .textContainer h2{
-    font-size: 2rem;
-  } */
 
   .textContainer p {
     font-size: 0.9rem;

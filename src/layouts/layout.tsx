@@ -1,9 +1,9 @@
-import  { Josefin_Sans }  from 'next/font/google'
+import  { Quicksand }  from 'next/font/google'
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import Headroom from 'react-headroom'
 
-const jose = Josefin_Sans({ subsets: ['vietnamese'], weight: ['300']})
+const jose = Quicksand({ subsets: ['latin'], weight: ['300']})
 
 export default function RootLayout({
   children,

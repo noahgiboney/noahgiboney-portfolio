@@ -1,50 +1,57 @@
 .projectContainer {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap; 
-  justify-content: space-evenly;
-  width: 90%; 
-  margin: 0 auto; 
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for vertical alignment */
+  gap: 25px;
+  padding: 30px;
 }
 
-.project {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  height: 350px;
-  background-color: var(--primary);
-  padding: 20px;
-  margin: 15px;
+.projectCard {
+  background: var(--primary);
+  border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
   text-decoration: none;
-} 
-
-.projectInfo{
-  text-align: left;
-  line-height: 2vh;
+  color: var(--text);
+  overflow: hidden;
 }
 
-@media only screen and (max-width: 600px) {
-  .projectContainer{
-    flex-direction: column;
-  }
-}
-  
-.project p {
-  padding-bottom: 20px;
-  font-size: 1.7vh;
-}
-  
-.project:hover{
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 1);
-  cursor: pointer;
-  transform: scale(1.07);
+.projectCard:hover {
+  transform: translateY(-5px) scale(1.03);
 }
 
-.skills p{
-  color: #48494B;
+.projectCard h2 {
+  font-size: 1.7em;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
+
+.projectCard p {
+  font-size: 1em;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.skills {
+  font-size: 0.85em; 
+  font-weight: 500; 
+  margin-top: 15px; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills p {
+  background: var(--secondary); 
+  color: var(--accent);
+  border-radius: 4px;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+
+/* Removing the media query as it's no longer needed for single column layout */

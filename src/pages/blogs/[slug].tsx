@@ -70,7 +70,9 @@ const BlogPage: NextPage<BlogPageProps> = ({ slug }) => {
             {Array.isArray(section.sections) && section.sections.map((content: IContent, contentIndex: number) => (
               <div key={contentIndex} className={style.content}> 
                 <p>{content.content}</p>
-                {content.image && <img src={content.image} alt="Content" />}
+                <div className={style.imageContainer}>
+                  {content.image && <img src={content.image} alt="Content" />}
+                </div>
               </div>
             ))}
           </article>

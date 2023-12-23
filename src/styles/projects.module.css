@@ -28,6 +28,10 @@
     align-items: baseline;
 }
 
+.content{
+    padding: 15px 0;
+}
+
 .subSection h2{
   font-size: 5vh;
   padding: 50px 0px 20px;

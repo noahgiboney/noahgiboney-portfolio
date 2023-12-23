@@ -83,7 +83,6 @@ const aStarAlgo =
 
     return (
       <section className={style.mainContainer}>
-            
         <h3>Virtual World</h3>
         <div id='sectionLine'></div>
 

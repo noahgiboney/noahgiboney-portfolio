@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { GetServerSideProps, NextPage } from 'next';
 import { IBlog } from '@/database/blogSchema';
-import style from '@/styles/blog/blog.module.css';
+import style from '@/styles/projects.module.css'
 import Comment from '@/components/Comment';
 import CommentForm from '@/components/CommentForm';
 
@@ -59,40 +59,39 @@ const BlogPage: NextPage<BlogPageProps> = ({ slug }) => {
   }
 
   return (
-    <div className={style.blogContainer}>
-      <h1>{blog.title}</h1>
-      <p>{blog.date}</p>
-      <div id='sectionLine'></div>
-
-      {/* Render each content section */}
-      {Array.isArray(blog.content) && blog.content.map((section: ISection, index: number) => (
-        <article key={index}>
-          <h3>{section.title}</h3>
-          {Array.isArray(section.sections) && section.sections.map((content: IContent, contentIndex: number) => (
-            <div key={contentIndex}>  {/* Changed from <section> to <div> to avoid HTML element conflict */}
-              <p>{content.content}</p>
-              {content.image && <img src={content.image} alt="Content" />}
-            </div>
-          ))}
-        </article>
-      ))}
-
-      <section className={style.commentSection}>
-        <h2>Comments</h2>
+      <div className={style.mainContainer}>
+        <h3>{blog.title}</h3>
+        <p>{blog.date}</p>
         <div id='sectionLine'></div>
 
-        <CommentForm blogSlug={slug} onCommentAdded={refreshComments} /> 
+        {Array.isArray(blog.content) && blog.content.map((section: ISection, index: number) => (
+          <article key={index} className={style.subSection}>
+            <h2>{section.title}</h2>
+            {Array.isArray(section.sections) && section.sections.map((content: IContent, contentIndex: number) => (
+              <div key={contentIndex} className={style.content}> 
+                <p>{content.content}</p>
+                {content.image && <img src={content.image} alt="Content" />}
+              </div>
+            ))}
+          </article>
+        ))}
 
-        {blog.comments && blog.comments.length > 0 ? (
-          blog.comments.map((comment, index) => (
-              <Comment key={index} comment={comment}/> 
-          ))
-        ) : (
-          <p>No comments yet. Be the first to comment!</p>
-        )} 
-        <div id='commentDivirdor'></div>
-      </section>
-    </div>
+          <h3>Comments</h3>
+          <div id='sectionLine'></div>
+          <CommentForm blogSlug={slug} onCommentAdded={refreshComments} /> 
+
+          {blog.comments && blog.comments.length > 0 ? (
+            blog.comments.map((comment, index) => (
+                <Comment key={index} comment={comment}/> 
+            ))
+          ) : (
+            <div>
+              <br></br>
+              <p>No comments yet. Be the first to comment!</p>
+            </div>
+          )} 
+          <div id='commentDivirdor'></div>
+        </div>
   );
 };
 

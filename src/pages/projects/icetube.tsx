@@ -23,8 +23,7 @@ export default function Home() {
 
         <section className={style.subSection}>
           <h2 id='one'>Project Overview</h2>
-          <p>Completed this Alarm clock assembly kit by Adafruit. This project required Eletrical assembly, soldering components to a PCB board, and testing DC voltage with a multimeter. Overall, this was my first electrical project, I learned a lot and had fun.</p>
-          <br></br>
+          <p>Completed an Alarm clock assembly kit by Adafruit. This project required Eletrical assembly, soldering components to a PCB board, and testing DC voltage with a multimeter. Overall, this was my first electrical project, I learned a lot and had fun.</p>
           <p>Information on this kit can be found <a href='https://learn.adafruit.com/ice-tube-clock-kit/' target='_blank'>here</a>.</p>  
         </section>
         

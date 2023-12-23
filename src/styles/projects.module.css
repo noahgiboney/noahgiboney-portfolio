@@ -25,12 +25,8 @@
 .subSection{
     height: auto;
     width: 90%;
-    align-items: baseline;
 }
 
-.content{
-    padding: 15px 0;
-}
 
 .subSection h2{
   font-size: 3.25vh;

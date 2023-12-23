@@ -54,3 +54,8 @@
   white-space: nowrap;
 }
 
+@media (max-width: 768px) {
+  .skills{
+    font-size: 0.7em;
+  }
+}

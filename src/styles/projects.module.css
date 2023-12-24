@@ -10,16 +10,34 @@
 }
 
 .tableOfContents ul li{
-    display: inline;
-    text-decoration: none;
-    list-style: none;
-    font-size: 2vh;
-    font-style: italic;
-    margin: 0px 1vw 0px;
+    margin: 0px 1vw;
+    font-size: 1.8vh;
+    position: relative; 
+    display: inline-block; 
 }
 
-.tableOfContents ul li:hover{
-    text-decoration: underline;
+.tableOfContents a{
+    color: var(--accent);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tableOfContents a:hover::after,
+.tableOfContents a:focus::after{
+    transform: scaleX(1);
+}
+
+.tableOfContents a::after{
+    content: '';
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: var(--accent); 
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
 }
 
 .subSection{

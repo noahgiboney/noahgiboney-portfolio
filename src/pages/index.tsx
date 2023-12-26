@@ -50,7 +50,6 @@ export async function getStaticProps() {
   };
 }
 
-
 export default function Home({blogs, projects}: HomeProps) {
 
   return (

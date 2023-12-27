@@ -21,6 +21,7 @@ interface BlogPageProps {
 
 const BlogPage: NextPage<BlogPageProps> = ({ slug }) => {
   const [blog, setBlog] = useState<IBlog | null>(null);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchBlogData = async () => {
@@ -36,6 +37,9 @@ const BlogPage: NextPage<BlogPageProps> = ({ slug }) => {
       } catch (error) {
         console.error('Error fetching blog data:', error);
         setBlog(null);
+      }
+      finally {
+        setLoading(false)
       }
     };
 
@@ -53,6 +57,10 @@ const BlogPage: NextPage<BlogPageProps> = ({ slug }) => {
       console.error('Error refreshing comments:', error);
     }
   };
+
+  if(loading){
+    return <div className={style.loadingScreen}>Loading</div>
+  }
 
   if (!blog) {
     return <div>Blog not found</div>;

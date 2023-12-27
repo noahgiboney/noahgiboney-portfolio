@@ -69,3 +69,19 @@
     justify-content: center;
     padding: 20px 0px
 }
+
+.loadingContainer {
+    position: fixed;        
+    top: 50%;               
+    left: 50%;              
+    transform: translate(-50%, -50%); 
+    z-index: 1000;          
+    width: 100px;           
+    height: 100px;          
+    display: flex;          
+    justify-content: center; 
+    align-items: center;    
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;    
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+  }

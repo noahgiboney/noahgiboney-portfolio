@@ -59,7 +59,7 @@ const BlogPage: NextPage<BlogPageProps> = ({ slug }) => {
   };
 
   if(loading){
-    return <div className={style.loadingScreen}>Loading</div>
+    return <div className={style.loadingContainer}>Loading</div>
   }
 
   if (!blog) {

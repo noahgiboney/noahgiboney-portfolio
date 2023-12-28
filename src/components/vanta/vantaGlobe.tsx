@@ -1,22 +1,22 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
-import GLOBE from 'vanta/dist/vanta.globe.min';
+import NET from 'vanta/dist/vanta.net.min';
 
 const VantaGlobe: React.FC = () => {
-  const [vantaEffect, setVantaEffect] = useState<ReturnType<typeof GLOBE> | null>(null);
+  const [vantaEffect, setVantaEffect] = useState<ReturnType<typeof NET> | null>(null);
   const vantaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!vantaEffect && vantaRef.current) {
         setVantaEffect(
-          GLOBE({
+          NET({
           el: vantaRef.current,
           THREE: THREE,
           color: 0xfcfcfd,
           color2: 0xb2aacf,
           backgroundColor: 0xb2aacf,
-          size: 0.0,
+          size: 0.1,
         })
       );
     }

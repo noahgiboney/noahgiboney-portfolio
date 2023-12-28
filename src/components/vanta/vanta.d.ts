@@ -1,7 +1,7 @@
-declare module 'vanta/dist/vanta.globe.min' {
+declare module 'vanta/dist/vanta.net.min' {
     import { VantaEffect } from 'vanta';
   
-    interface VantaGlobeOptions {
+    interface VantaNetOptions {
       el: HTMLElement;
       THREE: any;
       color?: number;
@@ -12,5 +12,5 @@ declare module 'vanta/dist/vanta.globe.min' {
       
     }
   
-    export default function GLOBE(options: VantaGlobeOptions): VantaEffect;
+    export default function Net(options: VantaNetOptions): VantaEffect;
   }

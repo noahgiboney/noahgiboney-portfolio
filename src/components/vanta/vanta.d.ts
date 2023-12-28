@@ -8,7 +8,9 @@ declare module 'vanta/dist/vanta.net.min' {
       color2?: number;
       color3?: number;
       backgroundColor?: number;
-      size?: number;
+      scale?: number;
+      showDots?: Boolean;
+      maxDistance: Number;
       
     }
   

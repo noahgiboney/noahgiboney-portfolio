@@ -13,10 +13,12 @@ const VantaGlobe: React.FC = () => {
           NET({
           el: vantaRef.current,
           THREE: THREE,
-          color: 0xfcfcfd,
-          color2: 0xb2aacf,
-          backgroundColor: 0xb2aacf,
-          size: 0.1,
+          showDots: false,
+          color: 0x0,
+          color2: 0x0,
+          backgroundColor: 0x0,
+          scale: 0.5,
+          maxDistance: 15,
         })
       );
     }

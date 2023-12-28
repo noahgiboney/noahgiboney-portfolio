@@ -9,6 +9,10 @@
   color: var(--text);
 }
 
+.vantaContainer h2{
+  color: var(--background);
+}
+
 .homeContainer {
   display: flex;
   flex-direction: column;
@@ -18,7 +22,6 @@
 }
 
 .homeContainer h2 {
-  color: #020203;
   text-align: center;
   background-color: transparent;
   font-weight: bold;

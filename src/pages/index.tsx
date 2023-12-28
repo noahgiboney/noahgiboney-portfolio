@@ -1,5 +1,5 @@
 import style from '@/styles/index.module.css'
-import VantaFog from '@/components/vanta/vantaGlobe';
+import VantaGlobe from '@/components/vanta/vantaGlobe';
 import Blog from '@/database/blogSchema';
 import connectDB from '@/database/helpers/db';
 import {IBlog} from '@/database/blogSchema'
@@ -55,7 +55,7 @@ export default function Home({blogs, projects}: HomeProps) {
   return (
     <div>
       <div className={style.vantaContainer}>
-      <VantaFog/>
+      <VantaGlobe/>
         <section className={style.homeContainer}>
           <h2>Noah Giboney</h2>
           <div className={style.socialsContainer}>

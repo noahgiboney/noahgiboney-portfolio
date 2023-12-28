@@ -6,7 +6,9 @@ declare module 'vanta/dist/vanta.globe.min' {
       THREE: any;
       color?: number;
       color2?: number;
+      color3?: number;
       backgroundColor?: number;
+      size?: number;
       
     }
   

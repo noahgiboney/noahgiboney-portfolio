@@ -14,8 +14,9 @@ const VantaGlobe: React.FC = () => {
           el: vantaRef.current,
           THREE: THREE,
           color: 0x0,
-          color2: 0x655699,
-          backgroundColor: 0xfcfcfd,
+          color2: 0xb2aacf,
+          backgroundColor: 0xb2aacf,
+          size: 0.5,
         })
       );
     }

@@ -1,18 +1,14 @@
-declare module 'vanta/dist/vanta.net.min' {
+declare module 'vanta/dist/vanta.halo.min' {
     import { VantaEffect } from 'vanta';
   
-    interface VantaNetOptions {
+    interface VantaHaloOptions {
       el: HTMLElement;
       THREE: any;
-      color?: number;
-      color2?: number;
-      color3?: number;
-      backgroundColor?: number;
-      scale?: number;
-      showDots?: Boolean;
-      maxDistance: Number;
-      
+      baseColor?: number;
+      backgroundColor?: number; 
+      size?: number;
+      amplitudeFactor?: number;
     }
   
-    export default function Net(options: VantaNetOptions): VantaEffect;
+    export default function Halo(options: VantaHaloOptions): VantaEffect;
   }

@@ -1,6 +1,7 @@
 .vantaContainer {
   display: flex;
   flex-direction: column;
+  position: relative;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -8,13 +9,12 @@
   color: var(--text);
   background: linear-gradient(135deg, 
               var(--background) 10%, 
-              #b2aacf 30%, 
-              #d8d5e7 50%, 
-              #655699 70%, 
+              var(--primary) 30%, 
+              var(--secondary) 50%, 
+              var(--accent) 70%, 
               var(--background) 90%);
   background-size: 200% 200%;
   animation: GradientShift 15s ease infinite;
-  position: relative;
 }
 
 @keyframes GradientShift {

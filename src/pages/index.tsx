@@ -69,9 +69,7 @@ export default function Home({blogs, projects}: HomeProps) {
             </a>
           </div>   
         </section>
-        <div className={style.arrowContainer}>
-          <a href='#about'><div className={style.arrow}></div></a>
-        </div>
+        <a href='#about'><div className={style.arrow}></div></a>
       </div>
 
       <div className={style.mainContainer}>

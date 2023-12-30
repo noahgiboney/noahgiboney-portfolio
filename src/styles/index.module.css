@@ -4,13 +4,23 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 90vh;
-  background-color: #FCFCFD;
+  height: 92vh; 
   color: var(--text);
+  background: linear-gradient(135deg, 
+              var(--background) 10%, 
+              #b2aacf 30%, 
+              #d8d5e7 50%, 
+              #655699 70%, 
+              var(--background) 90%);
+  background-size: 200% 200%;
+  animation: GradientShift 15s ease infinite;
+  position: relative;
 }
 
-.vantaContainer h2{
-  color: var(--text);
+@keyframes GradientShift {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
 .homeContainer {
@@ -53,14 +63,11 @@
   }
 }
 
-.arrowContainer {
-  display: flex;
-  justify-content: center;
-  background-color: #FCFCFD;
-  height: auto;
-}
-
 .arrow {
+  position: absolute;
+  bottom: 30px;
+  left: 48%;
+  transform: translateX(-50%) rotate(45deg);
   box-sizing: border-box;
   height: 50px;
   width: 50px;

@@ -108,11 +108,26 @@
        align-items: center;
        justify-content: center; 
        gap: 1.5rem;
-       background-color: var(--primary);
        transition: transform 0.7s ease-in-out;  
        transform: translate(-100vw);
        z-index: 99;
+       background: linear-gradient(135deg, 
+              var(--background) 10%, 
+              var(--primary) 30%, 
+              var(--secondary) 50%, 
+              var(--accent) 70%, 
+              var(--background) 90%);
+        background-size: 200% 200%;
+        animation: GradientShift 15s ease infinite;
     }
+
+
+    @keyframes GradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+    }
+    
 
     .navigation .responsiveNav{
         transform: none;

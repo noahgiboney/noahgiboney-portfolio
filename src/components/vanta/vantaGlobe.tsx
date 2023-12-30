@@ -1,22 +1,20 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
-import HALO from 'vanta/dist/vanta.halo.min';
+import TRUNK from 'vanta/dist/vanta.trunk.min';
 
 const VantaGlobe: React.FC = () => {
-  const [vantaEffect, setVantaEffect] = useState<ReturnType<typeof HALO> | null>(null);
+  const [vantaEffect, setVantaEffect] = useState<ReturnType<typeof TRUNK> | null>(null);
   const vantaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!vantaEffect && vantaRef.current) {
         setVantaEffect(
-          HALO({
+          TRUNK({
           el: vantaRef.current,
           THREE: THREE,
-          baseColor: 0x0,
+          color: 0xffffff,
           backgroundColor: 0x0,
-          size: 0.5,
-          amplitudeFactor: 1.4,
         })
       );
     }

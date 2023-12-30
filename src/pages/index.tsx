@@ -55,7 +55,6 @@ export default function Home({blogs, projects}: HomeProps) {
   return (
     <div>
       <div className={style.vantaContainer}>
-      <VantaGlobe/>
         <section className={style.homeContainer}>
           <h2>Noah Giboney</h2>
           <div className={style.socialsContainer}>

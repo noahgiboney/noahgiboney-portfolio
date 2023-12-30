@@ -1,14 +1,12 @@
-declare module 'vanta/dist/vanta.halo.min' {
+declare module 'vanta/dist/vanta.trunk.min' {
     import { VantaEffect } from 'vanta';
   
-    interface VantaHaloOptions {
+    interface VantaTrunkOptions {
       el: HTMLElement;
       THREE: any;
-      baseColor?: number;
+      color?: number;
       backgroundColor?: number; 
-      size?: number;
-      amplitudeFactor?: number;
     }
   
-    export default function Halo(options: VantaHaloOptions): VantaEffect;
+    export default function TRUNK(options: VantaTrunkOptions): VantaEffect;
   }

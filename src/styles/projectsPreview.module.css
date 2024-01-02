@@ -56,6 +56,10 @@
 }
 
 @media (max-width: 768px) {
+  .projectContainer{
+    flex-direction: column;
+  }
+  
   .skills {
     font-size: 0.75rem;
   }

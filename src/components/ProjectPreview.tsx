@@ -16,7 +16,9 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ({ projects }) => {
               <p>{project.timeframe}</p>
               <p>{project.description}</p>
               <div className={style.skills}>
-                <p>{project.technologies}</p>
+              {project.technologies.split(' ').map((word, index) => (
+              <span key={index} className={style.skillWord}>{word}</span> // Each word is wrapped in a <span>
+               ))}
               </div>
         </Link>
       ))}

@@ -16,8 +16,8 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ({ projects }) => {
               <p>{project.timeframe}</p>
               <p>{project.description}</p>
               <div className={style.skills}>
-              <p>{project.technologies}</p>
-      </div>
+                <p>{project.technologies}</p>
+              </div>
         </Link>
       ))}
     </div>

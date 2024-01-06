@@ -121,7 +121,7 @@ const aStarAlgo =
           <p>By calculating the total cost of a path as the sum of the actual start-to-node cost (g(n)) and the estimated node-to-goal cost (h(n)), a-star intelligently prioritizes nodes that seem closer to the goal. The algorithm iteratively explores adjacent nodes, expanding its search based on the lowest combined cost (f(n) = g(n) + h(n)). Its effectiveness hinges on the heuristic's accuracy: a well-chosen heuristic can significantly reduce the search area, making a-star the fastest. It never overestimates the actual cost to the goal, therefore a-star ensures the discovery of the shortest path.</p>
           <br></br>
           <p>This is my function 'computePath' which is the implementation of the a-star algorithm that the entities use in this virtual world. It takes in a stream of potential neighboring points, a predicate to determine if the point is valid to move to, and a biprediate if the point is within reach of the entity. I used a LinkedList to store the path and a priority queue to hold open points, sorted by the fCost and then the gCost. I also used a HashSet for the closed list for quick lookup times.</p>
-           <CodeSnippet code={aStarAlgo} language="java"/>
+          <CodeSnippet code={aStarAlgo} language="java"/>
         </section>
 
         <section className={style.subSection}>

@@ -22,7 +22,7 @@ export default function Home() {
 
         <section className={style.subSection}>
           <h2 id='one'>Overview</h2>
-          <p>This was my first iOS app built I built by myself using Swift and SwiftUI, that allows users to track their habits. I also was able to leverage the SwiftData framework to store and manage my data.</p>
+          <p>This is an iOS app I built using Swift and SwiftUI, that allows users to track their habits. I also was able to leverage the SwiftData framework to store and manage my data.</p>
           <br></br>
           <br></br>
           <a className="button" href="https://github.com/noahgiboney/habit-tracker" target="_blank" rel="noopener noreferrer">Repository</a>
@@ -30,7 +30,7 @@ export default function Home() {
 
         <section className={style.subSection}>
           <h2 id='two'>Demo</h2>
-          <p>Users can add personal habits, productive and destructive, and track progression by logging entrys. They are also to see their previous 7 day acticity.</p>
+          <p>Users can add personal habits, productive or destructive, and track progression by logging entrys. They are also to see their previous 7 day streak.</p>
           <div className={style.imageContainer}>
             <VideoPlayer src="/videos/HabitTrackerDemo.mp4"/>
           </div>
@@ -38,7 +38,7 @@ export default function Home() {
 
         <section className={style.subSection}>
           <h2 id='two'>SwiftData</h2>
-          <p>Using SwiftData for this app was a no brainer as it allowed for persisting data and storing using habits in the app memory.</p>
+          <p>Using SwiftData for this app was a no brainer. It allows for persisting data and storing using habits in the app memory.</p>
           <br></br>
           <p>This is how I defined my models for this app.</p>
           <CodeSnippet code={models} language="swift"/>

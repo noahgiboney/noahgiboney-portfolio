@@ -54,7 +54,7 @@ export default function Home() {
           <p>I did this through three functions. One to get the last seven days from the current day, one to build the model of week days text views to render, and one to build a bool array of if the user logged an entry during this day</p>
           <CodeSnippet code={dateFunctions} language="swift"/>
           <br></br>
-          <p>One I had these functions I was able to loop through the two arrays I built which are tiggered with an onappear modifier and render the correct data.</p>
+          <p>Once I had these functions I was able to loop through the two arrays I built which are tiggered with an onappear modifier and render the correct weekdays and user activity</p>
           <CodeSnippet code={dateView} language="swift"/>
         </section>
 

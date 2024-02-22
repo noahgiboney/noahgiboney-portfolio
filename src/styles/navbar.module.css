@@ -78,7 +78,6 @@
   outline: none;
   border: none;
   color: var(--background);
-  background-color: var(--accent);
   border-radius: 5px;
   visibility: hidden;
   opacity: 0;
@@ -89,6 +88,10 @@
   .navigation .navBtn {
     visibility: visible;
     opacity: 1;
+  }
+
+  .navigation .navBtn:hover {
+    background-color: var(--accent);
   }
 
   .navigation nav {

@@ -1,163 +1,167 @@
 .navigation {
-    color: var(--text);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    padding: 0px 2rem;
-    font-weight: bold;
-    background-color: var(--background);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  color: var(--text);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0px 2rem;
+  font-weight: bold;
+  background-color: var(--text);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.logo h1{
-    color: var(--text);
+.logo h1 {
+  color: var(--background);
 }
 
 .logo {
-    background-color: var(--background);
-    border: 0px solid black;
-    color: var(--text);
-    text-decoration: none;
-    margin: 10px;
-    position: relative;
-    z-index: 1;
-    display: inline-block; 
-    overflow: hidden; 
-  }
-  
-  .logo::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--accent); 
-    z-index: -1;
-    transform: scaleY(0);
-    transform-origin: 0 0; 
-    transition: transform 0.5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
-  }
-  
-  .logo:hover::before {
-    transform: scaleY(1);
-  }
-  
-  .logo:hover h1 {
-    color: white; 
-  }
+  border: 0px solid black;
+  text-decoration: none;
+  margin: 10px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent);
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: transform 0.5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.logo:hover::before {
+  transform: scaleY(1);
+}
 
 .navLinks a {
-    margin: 0px 2rem;
-    text-decoration: none;
-    color: var(--text);
-    font-size: 1.8vh;
-    position: relative; 
-    display: inline-block; 
-    cursor: pointer;
+  margin: 0px 2rem;
+  text-decoration: none;
+  color: var(--background);
+  font-size: 1.8vh;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .navLinks a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px; 
-    left: 0;
-    width: 100%;
-    height: 2px; 
-    background-color: var(--accent); 
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
 }
 
 .navLinks a:hover::after,
 .navLinks a:focus::after {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
-.navigation .navBtn{
-    padding: 5px 5px 0px;
-    cursor: pointer;
-    background: transparent;
-    outline: none;
-    border: none;
-    color: var(--background);
-    background-color: var(--accent);
-    border-radius: 5px;
-    visibility: hidden; 
-    opacity: 0;
-    font-size: 1.8rem;
+.navigation .navBtn {
+  padding: 5px 5px 0px;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: var(--background);
+  background-color: var(--accent);
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
 }
 
 @media only screen and (max-width: 1024px) {
-    .navigation .navBtn {
-        visibility: visible;
-        opacity: 1;
-    }
+  .navigation .navBtn {
+    visibility: visible;
+    opacity: 1;
+  }
 
-    .navigation nav {
-       position: fixed;
-       top: 0px;
-       left: 0px;
-       height: 100vh;
-       width: 100vw;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       justify-content: center; 
-       gap: 1.5rem;
-       transition: transform 0.7s ease-in-out;  
-       transform: translate(-100vw);
-       z-index: 99;
-       background: linear-gradient(135deg, 
-              var(--background) 10%, 
-              var(--primary) 30%, 
-              var(--secondary) 50%, 
-              var(--accent) 70%, 
-              var(--background) 90%);
-        background-size: 200% 200%;
-        animation: GradientShift 15s ease infinite;
-    }
+  .navigation nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: transform 0.7s ease-in-out;
+    transform: translate(-100vw);
+    z-index: 99;
+    background: linear-gradient(
+      135deg,
+      var(--background) 10%,
+      var(--primary) 30%,
+      var(--secondary) 50%,
+      var(--accent) 70%,
+      var(--background) 90%
+    );
+    background-size: 200% 200%;
+    animation: GradientShift 15s ease infinite;
+  }
 
-
-    @keyframes GradientShift {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+  @keyframes GradientShift {
+    0% {
+      background-position: 0% 50%;
     }
-    
-
-    .navigation .responsiveNav{
-        transform: none;
+    50% {
+      background-position: 100% 50%;
     }
-
-    nav .navCloseBtn {
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
+    100% {
+      background-position: 0% 50%;
     }
+  }
 
-    .navigation a {
-        font-size: 1.5rem;
-    }
+  .navigation .responsiveNav {
+    transform: none;
+  }
 
-    .navigation a:hover{
-        color: var(--text);
-    }
+  nav .navCloseBtn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
 
-    .logo a{
-        font-size: 1em;
-    }
+  .navigation a {
+    font-size: 1.5rem;
+  }
+
+  .navigation a:hover {
+    color: var(--text);
+  }
+
+  .logo a {
+    font-size: 1em;
+  }
 }
 
 .logo {
-    padding: 15px;
+  padding: 15px;
 }
 
-.line{
-    width: 100%;
-    height: 3px;
-    background-color: var(--text);
+.logo .line:hover {
+  color: var(--text);
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--background);
 }

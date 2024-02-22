@@ -1,5 +1,4 @@
 import style from "@/styles/index.module.css";
-import VantaGlobe from "@/components/vanta/vantaGlobe";
 import Blog from "@/database/blogSchema";
 import connectDB from "@/database/db";
 import { IBlog } from "@/database/blogSchema";
@@ -14,7 +13,7 @@ interface HomeProps {
 }
 
 async function getBlogs() {
-  await connectDB(); // Connect to the database
+  await connectDB();
 
   try {
     const blogs = await Blog.find().sort({ date: -1 });
@@ -25,7 +24,7 @@ async function getBlogs() {
 }
 
 async function getProjects() {
-  await connectDB(); // Connect to the database
+  await connectDB();
 
   try {
     const projects = await Project.find().sort({ order: 1 });
@@ -38,11 +37,9 @@ async function getProjects() {
 export async function getStaticProps() {
   let blogs = await getBlogs();
   let projects = await getProjects();
-  //mongoose to json
   blogs = JSON.parse(JSON.stringify(blogs));
   projects = JSON.parse(JSON.stringify(projects));
   return {
-    // Pass the blogs as a prop or an empty array if null
     props: {
       blogs: blogs || [],
       projects: projects || [],
@@ -53,40 +50,16 @@ export async function getStaticProps() {
 export default function Home({ blogs, projects }: HomeProps) {
   return (
     <div>
-      <div className={style.vantaContainer}>
+      {/* <div className={style.vantaContainer}>
         <section className={style.homeContainer}>
           <h2>Noah Giboney</h2>
-          <div className={style.socialsContainer}>
-            <a
-              href="https://www.linkedin.com/in/noah-giboney-896847261/"
-              target="_blank"
-            >
-              <img
-                src="/images/icons/linkedin.png"
-                className="round"
-                alt="LinkedIn"
-              />
-            </a>
-            <a href="https://github.com/noahgiboney" target="_blank">
-              <img
-                src="/images/icons/github.png"
-                className="round"
-                alt="GitHub"
-              />
-            </a>
-            <a href="#contact">
-              <img src="/images/icons/mail.png" className="round" alt="Email" />
-            </a>
-          </div>
         </section>
         <a href="#about">
           <div className={style.arrow}></div>
         </a>
-      </div>
+      </div> */}
 
       <div className={style.mainContainer}>
-        <h3 id="about">About</h3>
-        <div id="sectionLine"></div>
         <section className={style.aboutContainer}>
           <div className={style.textContainer}>
             <h2>
@@ -108,6 +81,32 @@ export default function Home({ blogs, projects }: HomeProps) {
               </p>
             </div>
             <div className={style.buttonContainer}>
+              <div className={style.socialsContainer}>
+                <a
+                  href="https://www.linkedin.com/in/noah-giboney-896847261/"
+                  target="_blank"
+                >
+                  <img
+                    src="/images/icons/linkedin.png"
+                    className="round"
+                    alt="LinkedIn"
+                  />
+                </a>
+                <a href="https://github.com/noahgiboney" target="_blank">
+                  <img
+                    src="/images/icons/github.png"
+                    className="round"
+                    alt="GitHub"
+                  />
+                </a>
+                <a href="#contact">
+                  <img
+                    src="/images/icons/mail.png"
+                    className="round"
+                    alt="Email"
+                  />
+                </a>
+              </div>
               <a
                 className="button"
                 href="documents/Noah Giboney Resume.pdf"
@@ -115,22 +114,6 @@ export default function Home({ blogs, projects }: HomeProps) {
                 rel="noopener noreferrer"
               >
                 Resume
-              </a>
-              <a
-                className="button"
-                href="https://github.com/noahgiboney"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
-              <a
-                className="button"
-                href="https://www.linkedin.com/in/noah-giboney-896847261/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
               </a>
             </div>
           </div>

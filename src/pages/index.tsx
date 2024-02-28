@@ -106,15 +106,15 @@ export default function Home({ blogs, projects }: HomeProps) {
                     alt="Email"
                   />
                 </a>
-              </div>
-              <a
+                <a
                 className="button"
-                href="documents/Noah Giboney Resume.pdf"
+                href="Noah Giboney Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Resume
               </a>
+              </div>
             </div>
           </div>
           <div className={style.faceShotContainer}>

@@ -5,14 +5,14 @@ import VideoPlayer from '@/components/VideoPlayer';
 export default function Home() {
     return (
       <section className={style.mainContainer}>
-        <h3>Habit Tracker</h3>
+        <h3>Cryptid Coordinates</h3>
         <div id='sectionLine'></div>
 
         <section className={style.tableOfContents}>
           <ul>
             <li><a href='#one'>Overview</a></li>
             <li>•</li>
-            <li><a href='#two'>Demo</a></li>
+            <li><a href='#two'>App Store</a></li>
             <li>•</li>
             <li><a href='#three'>SwiftData</a></li>
             <li>•</li>
@@ -22,18 +22,16 @@ export default function Home() {
 
         <section className={style.subSection}>
           <h2 id='one'>Overview</h2>
-          <p>This is an iOS app I built using Swift and SwiftUI, that allows users to track their habits. I also was able to leverage the SwiftData framework to store and manage my data.</p>
+          <p>This is a iOS mobile application that I build using Swift and SwiftUI, along with several other frameworks to be discussed. It reveals haunted locations and ancient secrets hidden in plain sight.</p>
           <br></br>
-          <br></br>
-          <a className="button" href="https://github.com/noahgiboney/habit-tracker" target="_blank" rel="noopener noreferrer">Repository</a>
+          <a className="button" href="https://github.com/noahgiboney/cryptid-coordinates" target="_blank" rel="noopener noreferrer">Repository</a>
         </section>
 
         <section className={style.subSection}>
-          <h2 id='two'>Demo</h2>
-          <p>Users can add personal habits, productive or destructive, and track progression by logging entrys. They are also to see their previous 7 day streak.</p>
-          <div className={style.imageContainer}>
-            <VideoPlayer src="/videos/HabitTrackerDemo.mp4"/>
-          </div>
+          <h2 id='two'>App Store</h2>
+          <p>Cryptid Coordinates is avaliable on the App Store. Download it below</p>
+          <br></br>
+          <a className="button" href="https://apps.apple.com/us/app/cryptid-coordinates/id6478195420" target="_blank" rel="noopener noreferrer">App Store</a>
         </section>
 
         <section className={style.subSection}>

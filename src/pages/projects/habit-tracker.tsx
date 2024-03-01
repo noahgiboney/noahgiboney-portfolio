@@ -24,7 +24,6 @@ export default function Home() {
           <h2 id='one'>Overview</h2>
           <p>This is an iOS app I built using Swift and SwiftUI, that allows users to track their habits. I also was able to leverage the SwiftData framework to store and manage my data.</p>
           <br></br>
-          <br></br>
           <a className="button" href="https://github.com/noahgiboney/habit-tracker" target="_blank" rel="noopener noreferrer">Repository</a>
         </section>
 

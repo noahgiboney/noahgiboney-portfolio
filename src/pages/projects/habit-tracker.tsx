@@ -37,7 +37,7 @@ export default function Home() {
 
         <section className={style.subSection}>
           <h2 id='two'>SwiftData</h2>
-          <p>Using SwiftData for this app was a no brainer. It allows for persisting data and storing using habits in the app memory.</p>
+          <p>Using SwiftData for this app was the best choice. It allows for persisting data and storing using habits in the app memory.</p>
           <br></br>
           <p>This is how I defined my models for this app.</p>
           <CodeSnippet code={models} language="swift"/>

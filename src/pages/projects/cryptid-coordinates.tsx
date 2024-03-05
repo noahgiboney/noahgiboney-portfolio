@@ -12,30 +12,22 @@ export default function Home() {
           <ul>
             <li><a href='#one'>Overview</a></li>
             <li>•</li>
-            <li><a href='#two'>App Store</a></li>
+            <li><a href='#two'>MapKit</a></li>
             <li>•</li>
-            <li><a href='#three'>SwiftData</a></li>
-            <li>•</li>
-            <li><a href='#four'>Dates</a></li>
+            <li><a href='#three'>Cluster Manager</a></li>
           </ul>
         </section>
 
         <section className={style.subSection}>
           <h2 id='one'>Overview</h2>
-          <p>This is a iOS mobile application that I build using Swift and SwiftUI, along with several other frameworks to be discussed. It reveals haunted locations and ancient secrets hidden in plain sight.</p>
+          <p>Cryptid Coordinates iOS mobile application that I build using Swift and SwiftUI, along with several other frameworks to be discussed. It reveals haunted locations and ancient secrets hidden in plain sight. It is avaliable on the app store for download below.</p>
           <br></br>
           <a className="button" href="https://github.com/noahgiboney/cryptid-coordinates" target="_blank" rel="noopener noreferrer">Repository</a>
-        </section>
-
-        <section className={style.subSection}>
-          <h2 id='two'>App Store</h2>
-          <p>Cryptid Coordinates is avaliable on the App Store. Download it below</p>
-          <br></br>
           <a className="button" href="https://apps.apple.com/us/app/cryptid-coordinates/id6478195420" target="_blank" rel="noopener noreferrer">App Store</a>
         </section>
 
         <section className={style.subSection}>
-          <h2 id='two'>SwiftData</h2>
+          <h2 id='two'>MapKit</h2>
           <p>Using SwiftData for this app was a no brainer. It allows for persisting data and storing using habits in the app memory.</p>
           <br></br>
           <p>This is how I defined my models for this app.</p>
@@ -44,18 +36,6 @@ export default function Home() {
           <p>To use these models I setup the habit model on the container and was able to query an array of user habits, as well as add to this array through the environment context. Now with this array I can just pass around a single habit to each view that needs it under the hood swift gives me persisting data between views.</p>
           <CodeSnippet code={querying} language="swift"/>
         </section>
-
-        <section className={style.subSection}>
-          <h2 id='two'>Dates</h2>
-          <p>One of the most challening parts of building this app was working with dates and building the view for showing last 7 day activity. The reason for this is due to the fact in swift we have to use the calendar object and break the date into components.</p>
-          <br></br>
-          <p>I did this through three functions. One to get the last seven days from the current day, one to build the model of week days text views to render, and one to build a bool array of if the user logged an entry during this day</p>
-          <CodeSnippet code={dateFunctions} language="swift"/>
-          <br></br>
-          <p>Once I had these functions I was able to loop through the two arrays I built which are tiggered with an onappear modifier and render the correct weekdays and user activity</p>
-          <CodeSnippet code={dateView} language="swift"/>
-        </section>
-
       </section>
     );
   }

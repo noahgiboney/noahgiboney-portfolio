@@ -23,9 +23,6 @@ export default function NavBar() {
         <Link href={"/"} onClick={showNavBar}>
           Home
         </Link>
-        <Link href={"/#about"} onClick={showNavBar}>
-          About
-        </Link>
         <Link href={"/#portfolio"} onClick={showNavBar}>
           Portfolio
         </Link>

@@ -50,7 +50,7 @@ button{
   font-size: 1.7vh;
   font-weight: bold;
   border: 1.6px solid var(--text);
-  background-color: var(--background);
+  background-color: var(--primary);
   color: var(--text);
   text-decoration: none;
   margin: 10px;

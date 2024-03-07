@@ -7,12 +7,13 @@
   height: 80px;
   padding: 0px 2rem;
   font-weight: bold;
-  background-color: var(--text);
+  background-color: var(--background);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 0.4px solid black;
 }
 
 .logo h1 {
-  color: var(--background);
+  color: var(--text);
 }
 
 .logo {
@@ -46,7 +47,7 @@
 .navLinks a {
   margin: 0px 2rem;
   text-decoration: none;
-  color: var(--background);
+  color: var(--text);
   font-size: 1.8vh;
   position: relative;
   display: inline-block;
@@ -77,7 +78,7 @@
   background: transparent;
   outline: none;
   border: none;
-  color: var(--background);
+  color: var(--text);
   border-radius: 5px;
   visibility: hidden;
   opacity: 0;
@@ -160,11 +161,11 @@
 }
 
 .logo .line:hover {
-  color: var(--text);
+  color: var(--background);
 }
 
 .line {
   width: 100%;
   height: 3px;
-  background-color: var(--background);
+  background-color: var(--text);
 }
